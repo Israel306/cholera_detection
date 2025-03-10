@@ -126,13 +126,13 @@ class _NavBottomState extends State<NavBottom> {
         selectedItemColor: const Color(0xFF176C90),
         selectedLabelStyle: const TextStyle(
           fontSize: 12.0,
-          fontWeight: FontWeight.w600,
+          fontWeight: FontWeight.w700,
           fontFamily: 'Inter',
         ),
         unselectedLabelStyle: const TextStyle(
           fontSize: 12.0,
           color: Color(0xFF979797),
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w700,
           fontFamily: 'Inter',
         ),
         unselectedItemColor: const Color(0xFF979797),

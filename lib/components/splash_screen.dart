@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // Navigate to the signup page after 5 seconds
     Timer(
       const Duration(seconds: 5),
-      () => Navigator.pushReplacementNamed(context, '/signup'),
+      () => Navigator.pushReplacementNamed(context, '/home'),
     );
   }
 
@@ -26,15 +26,40 @@ class _SplashScreenState extends State<SplashScreen> {
     double screenWidth = screenSize.width;
     return Scaffold(
         backgroundColor: Colors.white,
-        body: Container(
-          width: double.infinity, // Take full width
-          height: double.infinity, // Take full height
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(
-                  'assets/splash.gif'), // Ensure it's added in pubspec.yaml
-              fit: BoxFit.cover, // Cover the entire screen
-            ),
+        body: Center(
+          child: Row(
+            // crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/cholera.png',
+                // width: 100,
+                // height: 100,
+                fit: BoxFit.cover,
+              ),
+
+              SizedBox(width: 5),
+              Text(
+                'Cholera',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 28,
+                  fontFamily: "Inter",
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+              SizedBox(width: 2),
+              Text(
+                ' Detector',
+                style: TextStyle(
+                  color: Color(0xFF176C90),
+                  fontSize: 28,
+                  fontFamily: "Inter",
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+
+            ],
           ),
         ));
   }
